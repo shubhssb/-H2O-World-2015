@@ -1,0 +1,39 @@
+1. Understand Model Complexity
+Model size depends on features
+Model size is independent of number of rows or training time
+
+
+2. Establish a Baseline on Holdout Data
+Develop a feel for the problem and the holdout performance of the different models
+
+
+3. Inspect Models in Flow (Notebook-style open-source UI for H2O)
+If model is wrong(wrong architecture, response, parameters, etc.), cancel it
+If model is taking too long, cancel and decrease model complexity
+If model is performing badly, cancel and increase model complexity
+
+
+4. Use Early Stopping (On by default for H2O)
+Saves tons of time
+Use Flow to inspect model
+arno-candel-h2o-use-early-stopping5. Control Scoring Overhead
+Validation data determines scoring speed and early stopping decision
+
+
+6. Use N-fold Cross-Validation
+Estimate your model performance well
+
+
+7. Use Regularization
+Overfitting is easy, generalization is art
+arno-candel-h2o-use-regularization8. Perform HyperParameter Search
+Parameters to tune: hidden dropout ratios, input dropout ratios, adaptive rate, etc.
+Focus on just finding one of the many good models
+
+
+9. Use Checkpointing
+Checkpointing enables fast exploration
+
+
+10. Tune Communication on Multi-Node
+Know your "target ratio of communication overhead to computation" value
